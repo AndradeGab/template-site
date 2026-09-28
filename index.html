@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="NOVA Serviços — soluções profissionais, atendimento de qualidade e serviços especializados.">
+    <meta name="description" id="meta-description" content="">
 
-    <title>NOVA Serviços | Soluções Profissionais</title>
+    <title id="page-title"></title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
         rel="stylesheet">
@@ -34,15 +34,15 @@
 
             <nav class="nav" id="nav">
 
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#diferenciais">Diferenciais</a>
-                <a href="#contato">Contato</a>
+                <a id="link-inicio" href="#">Início</a>
+                <a id="link-sobre" href="#">Sobre</a>
+                <a id="link-servicos" href="#">Serviços</a>
+                <a id="link-diferenciais" href="#">Diferenciais</a>
+                <a id="link-contato" href="#">Contato</a>
 
             </nav>
 
-            <a href="#contato" class="header-button">
+            <a href="#" class="header-button" id="header-contato">
                 Solicitar orçamento
             </a>
 
@@ -67,27 +67,17 @@
 
                 <div class="hero-text">
 
-                    <span class="hero-tag">
-                        Soluções profissionais
-                    </span>
+                    <span class="hero-tag" id="hero-tag"></span>
 
                     <h1 id="empresa-slogan"></h1>
 
-                    <p>
-                        Soluções profissionais para sua casa ou empresa,
-                        com atendimento personalizado e compromisso com
-                        cada projeto.
-                    </p>
+                    <p id="hero-descricao"></p>
 
                     <div class="hero-buttons">
 
-                        <a href="#contato" class="button button-primary">
-                            Solicitar orçamento
-                        </a>
+                        <a href="#" class="button button-primary" id="hero-botao-principal"></a>
 
-                        <a href="#servicos" class="button button-secondary">
-                            Conheça nossos serviços
-                        </a>
+                        <a href="#" class="button button-secondary" id="hero-botao-secundario"></a>
 
                     </div>
 
@@ -95,7 +85,7 @@
 
                 <div class="hero-image">
 
-                    <img src="imagens/hero.jpg" alt="Profissional realizando um serviço">
+                    <img id="hero-imagem" src="" alt="">
 
                 </div>
 
@@ -114,33 +104,21 @@
 
                 <div class="about-image">
 
-                    <img src="imagens/sobre.jpg" alt="Equipe da NOVA Serviços">
+                    <img id="sobre-imagem" src="" alt="">
 
                 </div>
 
                 <div class="about-text">
 
-                    <span class="section-tag">
-                        Sobre nós
-                    </span>
+                    <span class="section-tag" id="sobre-tag"></span>
 
-                    <h2>
-                        Experiência, compromisso
-                        e atenção aos detalhes.
-                    </h2>
+                    <h2 id="sobre-titulo"></h2>
 
-                    <p>
-                        A NOVA Serviços trabalha para oferecer soluções
-                        eficientes e um atendimento próximo de cada cliente.
-                    </p>
+                    <p id="sobre-texto-1"></p>
 
-                    <p>
-                        Nosso objetivo é entender cada necessidade e
-                        entregar um serviço de qualidade, buscando sempre
-                        segurança, organização e satisfação.
-                    </p>
+                    <p id="sobre-texto-2"></p>
 
-                    <a href="#contato" class="text-link">
+                    <a href="#" class="text-link" id="sobre-contato">
                         Fale conosco →
                     </a>
 
@@ -161,109 +139,15 @@
 
                 <div class="section-header">
 
-                    <span class="section-tag">
-                        Nossos serviços
-                    </span>
+                    <span class="section-tag" id="servicos-tag"></span>
 
-                    <h2>
-                        Soluções para diferentes necessidades.
-                    </h2>
+                    <h2 id="servicos-titulo"></h2>
 
-                    <p>
-                        Confira alguns dos serviços oferecidos pela
-                        NOVA Serviços.
-                    </p>
+                    <p id="servicos-descricao"></p>
 
                 </div>
 
-
-                <div class="services-grid">
-
-                    <article class="service-card">
-
-                        <div class="service-image">
-
-                            <img src="imagens/servico-1.jpg" alt="Serviço profissional">
-
-                        </div>
-
-                        <div class="service-content">
-
-                            <span class="service-number">
-                                01
-                            </span>
-
-                            <h3>
-                                Serviço especializado
-                            </h3>
-
-                            <p>
-                                Soluções realizadas por profissionais
-                                preparados para atender diferentes
-                                necessidades.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="service-card">
-
-                        <div class="service-image">
-
-                            <img src="imagens/servico-2.jpg" alt="Serviço de manutenção">
-
-                        </div>
-
-                        <div class="service-content">
-
-                            <span class="service-number">
-                                02
-                            </span>
-
-                            <h3>
-                                Manutenção
-                            </h3>
-
-                            <p>
-                                Manutenção preventiva e corretiva para
-                                manter tudo funcionando corretamente.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="service-card">
-
-                        <div class="service-image">
-
-                            <img src="imagens/servico-3.jpg" alt="Atendimento profissional">
-
-                        </div>
-
-                        <div class="service-content">
-
-                            <span class="service-number">
-                                03
-                            </span>
-
-                            <h3>
-                                Atendimento personalizado
-                            </h3>
-
-                            <p>
-                                Entendemos sua necessidade para oferecer
-                                uma solução adequada ao seu projeto.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                </div>
+                <div class="services-grid" id="services-grid"></div>
 
             </div>
 
@@ -280,90 +164,13 @@
 
                 <div class="section-header">
 
-                    <span class="section-tag">
-                        Por que escolher a NOVA?
-                    </span>
+                    <span class="section-tag" id="diferenciais-tag"></span>
 
-                    <h2>
-                        Um serviço pensado para você.
-                    </h2>
+                    <h2 id="diferenciais-titulo"></h2>
 
                 </div>
 
-
-                <div class="advantages-grid">
-
-                    <div class="advantage">
-
-                        <span class="advantage-icon">
-                            ✓
-                        </span>
-
-                        <h3>
-                            Qualidade
-                        </h3>
-
-                        <p>
-                            Atenção aos detalhes em cada etapa
-                            do serviço.
-                        </p>
-
-                    </div>
-
-
-                    <div class="advantage">
-
-                        <span class="advantage-icon">
-                            ✓
-                        </span>
-
-                        <h3>
-                            Profissionalismo
-                        </h3>
-
-                        <p>
-                            Atendimento responsável e transparente.
-                        </p>
-
-                    </div>
-
-
-                    <div class="advantage">
-
-                        <span class="advantage-icon">
-                            ✓
-                        </span>
-
-                        <h3>
-                            Pontualidade
-                        </h3>
-
-                        <p>
-                            Compromisso com prazos e horários
-                            combinados.
-                        </p>
-
-                    </div>
-
-
-                    <div class="advantage">
-
-                        <span class="advantage-icon">
-                            ✓
-                        </span>
-
-                        <h3>
-                            Atendimento
-                        </h3>
-
-                        <p>
-                            Comunicação próxima durante todo
-                            o projeto.
-                        </p>
-
-                    </div>
-
-                </div>
+                <div class="advantages-grid" id="advantages-grid"></div>
 
             </div>
 
@@ -380,18 +187,11 @@
 
                 <div class="cta-text">
 
-                    <span class="section-tag">
-                        Vamos conversar?
-                    </span>
+                    <span class="section-tag" id="cta-tag"></span>
 
-                    <h2>
-                        Precisa de um serviço profissional?
-                    </h2>
+                    <h2 id="cta-titulo"></h2>
 
-                    <p>
-                        Entre em contato e solicite um orçamento
-                        sem compromisso.
-                    </p>
+                    <p id="cta-descricao"></p>
 
                     <div class="cta-address">
 
@@ -403,11 +203,8 @@
 
                 </div>
 
-                <a id="whatsapp-cta" href="#" target="_blank" rel="noopener noreferrer" class="button button-primary">
-
-                    Falar pelo WhatsApp
-
-                </a>
+                <a id="whatsapp-cta" href="#" target="_blank" rel="noopener noreferrer"
+                    class="button button-primary"></a>
 
             </div>
 
@@ -425,26 +222,19 @@
         <div class="container footer-content">
 
             <div>
-
-                <a href="#inicio" class="logo footer-logo">
-                    NOVA<span>.</span>
+                <a href="#" class="logo footer-logo" id="footer-logo">
+                    <span id="footer-nome"></span><span class="footer-dot"> .</span>
                 </a>
 
-                <p>
-                    Soluções profissionais para sua empresa
-                    ou residência.
-                </p>
-
+                <p id="footer-descricao"></p>
             </div>
 
 
             <div class="footer-links">
-
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#contato">Contato</a>
-
+                <a id="footer-inicio" href="#">Início</a>
+                <a id="footer-sobre" href="#">Sobre</a>
+                <a id="footer-servicos" href="#">Serviços</a>
+                <a id="footer-contato" href="#">Contato</a>
             </div>
 
 
@@ -465,13 +255,58 @@
 
         <div class="footer-bottom">
 
-            <p>
-                © 2026 NOVA Serviços. Todos os direitos reservados.
-            </p>
+            <div class="footer-copy">
 
-            <p>
-                Desenvolvido por Andrade Web
-            </p>
+                <p>
+                    © <span id="ano"></span>
+                    <span id="footer-copyright"></span>
+                </p>
+
+            </div>
+
+            <div class="footer-developer">
+
+                <p id="footer-desenvolvedor"></p>
+
+                <div class="developer-links">
+
+                    <a id="developer-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                            <path
+                                d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.44 1.73 6.31L3.5 28.5l6.32-1.66A12.94 12.94 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3Zm0 23.7c-2.06 0-4.08-.55-5.84-1.59l-.42-.25-3.75.98 1-3.65-.27-.43A10.72 10.72 0 1 1 16 26.7Zm5.87-8.03c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.52-.16-.74.16-.22.32-.85 1.05-1.04 1.27-.19.22-.38.24-.7.08-.32-.16-1.34-.49-2.55-1.56-.94-.84-1.57-1.87-1.75-2.19-.18-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.22-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.9-.78 2.17-1.54.27-.76.27-1.41.19-1.54-.08-.14-.3-.22-.62-.38Z" />
+                        </svg>
+
+                        <span>WhatsApp</span>
+                    </a>
+
+
+                    <a id="developer-instagram" href="#" target="_blank" rel="noopener noreferrer">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z" />
+                        </svg>
+
+                        <span>Instagram</span>
+
+                    </a>
+
+
+                    <a id="developer-portfolio" href="#" target="_blank" rel="noopener noreferrer">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z" />
+                        </svg>
+
+                        <span>Portfólio</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
 
         </div>
 

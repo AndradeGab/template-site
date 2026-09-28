@@ -445,10 +445,15 @@ button {
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
 }
 
-.service-image {
-    height: 240px;
+.service-image img {
+    width: 100%;
+    height: 100%;
 
-    overflow: hidden;
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
 }
 
 .service-image img {
@@ -651,21 +656,81 @@ button {
 
 .footer-bottom {
     display: flex;
-
     align-items: center;
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 20px 0;
-
-    border-top: 1px solid #222222;
-
-    color: #777777;
-
-    font-size: 12px;
+    gap: 40px;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.footer-copy {
+    flex: 1;
+}
+
+.footer-developer {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-developer p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.developer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+
+.developer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-logo {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#footer-nome {
+    color: #ffffff;
+}
+
+.footer-dot {
+    color: var(--primary);
+}
+
+.developer-links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 12px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.developer-links svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+.developer-links a:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
 
 /* =========================
    RESPONSIVIDADE
@@ -842,8 +907,12 @@ button {
 
     .footer-bottom {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-        align-items: flex-start;
+    .footer-developer {
+        width: 100%;
     }
 
 }
@@ -926,6 +995,20 @@ button {
 #whatsapp-float:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+#whatsapp-float {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+#whatsapp-float.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 @media (max-width: 768px) {
