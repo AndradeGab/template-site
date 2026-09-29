@@ -56,7 +56,6 @@ const nomeEmpresa = document.querySelector("#empresa-nome");
 
 if (nomeEmpresa) {
     nomeEmpresa.textContent = empresa.nome;
-    nomeEmpresa.style.setProperty("--cor-destaque", empresa.corDestaque);
 }
 
 document.documentElement.style.setProperty(
@@ -96,10 +95,15 @@ if (instagramFooter) {
 }
 
 const enderecoEmpresa = document.querySelector("#empresa-endereco");
+const enderecoEmpresaLink = document.querySelector("#empresa-endereco-link");
 
 if (enderecoEmpresa) {
-    enderecoEmpresa.textContent = empresa.endereco;
-}   
+    enderecoEmpresa.textContent = empresa.endereco.texto;
+}
+
+if (enderecoEmpresaLink) {
+    enderecoEmpresaLink.href = empresa.endereco.mapa;
+}
 
 // Serviços
 // Serviços
@@ -142,7 +146,7 @@ if (servicesGrid) {
 
 }
 
- // Imagens principais
+// Imagens principais
 
 const heroImagem = document.querySelector("#hero-imagem");
 const sobreImagem = document.querySelector("#sobre-imagem");
@@ -157,11 +161,14 @@ if (sobreImagem) {
     sobreImagem.alt = empresa.imagens.sobreAlt;
 }
 
- // Sobre
+// Sobre
+
+// Sobre
 
 const sobreTitulo = document.querySelector("#sobre-titulo");
 const sobreTexto1 = document.querySelector("#sobre-texto-1");
 const sobreTexto2 = document.querySelector("#sobre-texto-2");
+const sobreContato = document.querySelector("#sobre-contato");
 
 if (sobreTitulo) {
     sobreTitulo.textContent = empresa.sobre.titulo;
@@ -173,6 +180,11 @@ if (sobreTexto1) {
 
 if (sobreTexto2) {
     sobreTexto2.textContent = empresa.sobre.texto2;
+}
+
+if (sobreContato) {
+    sobreContato.textContent = empresa.sobre.botao;
+    sobreContato.href = empresa.sobre.linkBotao;
 }
 
 // Diferenciais
@@ -224,10 +236,12 @@ if (heroDescricao) {
 
 if (heroBotaoPrincipal) {
     heroBotaoPrincipal.textContent = empresa.hero.botaoPrincipal;
+    heroBotaoPrincipal.href = empresa.hero.linkBotaoPrincipal;
 }
 
 if (heroBotaoSecundario) {
     heroBotaoSecundario.textContent = empresa.hero.botaoSecundario;
+    heroBotaoSecundario.href = empresa.hero.linkBotaoSecundario;
 }
 
 
@@ -252,6 +266,14 @@ if (ctaDescricao) {
 
 if (ctaBotao) {
     ctaBotao.textContent = empresa.cta.botao;
+
+    if (empresa.cta.novaAba) {
+        ctaBotao.target = "_blank";
+        ctaBotao.rel = "noopener noreferrer";
+    } else {
+        ctaBotao.removeAttribute("target");
+        ctaBotao.removeAttribute("rel");
+    }
 }
 
 // Títulos das seções
@@ -296,6 +318,8 @@ if (diferenciaisTitulo) {
 
 const pageTitle = document.querySelector("#page-title");
 const metaDescription = document.querySelector("#meta-description");
+const favicon = document.querySelector("#favicon");
+
 
 if (pageTitle) {
     pageTitle.textContent = empresa.seo.titulo;
@@ -306,6 +330,10 @@ if (metaDescription) {
         "content",
         empresa.seo.descricao
     );
+}
+
+if (favicon) {
+    favicon.href = empresa.seo.favicon;
 }
 
 // Footer
@@ -343,13 +371,19 @@ const linkContato = document.querySelector("#link-contato");
 
 const headerContato = document.querySelector("#header-contato");
 
-const sobreContato = document.querySelector("#sobre-contato");
+
 
 const footerLogo = document.querySelector("#footer-logo");
 const footerInicio = document.querySelector("#footer-inicio");
 const footerSobre = document.querySelector("#footer-sobre");
 const footerServicos = document.querySelector("#footer-servicos");
 const footerContato = document.querySelector("#footer-contato");
+
+
+
+const menu = empresa.menu;
+
+// Links do header
 
 if (linkInicio) {
     linkInicio.href = links.inicio;
@@ -371,25 +405,23 @@ if (linkContato) {
     linkContato.href = links.contato;
 }
 
+
+// Botão do header
+
 if (headerContato) {
+    headerContato.textContent = menu.botao;
     headerContato.href = links.contato;
 }
 
-if (heroBotaoPrincipal) {
-    heroBotaoPrincipal.href = links.contato;
-}
 
-if (heroBotaoSecundario) {
-    heroBotaoSecundario.href = links.servicos;
-}
+// Link do sobre
 
 if (sobreContato) {
     sobreContato.href = links.contato;
 }
 
-if (footerLogo) {
-    footerLogo.href = links.inicio;
-}
+
+// Links do footer
 
 if (footerInicio) {
     footerInicio.href = links.inicio;
@@ -406,6 +438,55 @@ if (footerServicos) {
 if (footerContato) {
     footerContato.href = links.contato;
 }
+
+
+// Logo do footer
+
+if (footerLogo) {
+    footerLogo.href = links.inicio;
+}
+
+if (footerInicio) {
+    footerInicio.textContent = menu.inicio;
+}
+
+if (footerSobre) {
+    footerSobre.textContent = menu.sobre;
+}
+
+if (footerServicos) {
+    footerServicos.textContent = menu.servicos;
+}
+
+if (footerContato) {
+    footerContato.textContent = menu.contato;
+}
+
+if (linkInicio) {
+    linkInicio.textContent = menu.inicio;
+}
+
+if (linkSobre) {
+    linkSobre.textContent = menu.sobre;
+}
+
+if (linkServicos) {
+    linkServicos.textContent = menu.servicos;
+}
+
+if (linkDiferenciais) {
+    linkDiferenciais.textContent = menu.diferenciais;
+}
+
+if (linkContato) {
+    linkContato.textContent = menu.contato;
+}
+
+if (headerContato) {
+    headerContato.textContent = menu.botao;
+}
+
+
 
 const footer = document.querySelector(".footer");
 
@@ -448,4 +529,17 @@ if (developerInstagram) {
 
 if (developerPortfolio) {
     developerPortfolio.href = linksDesenvolvedor.portfolio;
+}
+
+
+const themeToggle = document.querySelector("#theme-toggle");
+
+if (themeToggle) {
+
+    themeToggle.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark-mode");
+
+    });
+
 }

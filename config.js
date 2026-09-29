@@ -1,16 +1,20 @@
 const empresa = {
     nome: "NOVA Serviços",
 
-    slogan: "Qualidade e confiança em cada serviço.",
+    slogan: "Qualidade e confiança em cada serviço.", //subtitulo
 
     seo: {
         titulo: "NOVA Serviços | Soluções Profissionais",
-        descricao: "NOVA Serviços — soluções profissionais, atendimento de qualidade e serviços especializados."
+        descricao: "NOVA Serviços — soluções profissionais, atendimento de qualidade e serviços especializados.",
+        favicon: "imagens/hero.jpg"
     },
 
     whatsapp: "5513999999999",
     instagram: "@novaservicos",
-    endereco: "Rua das Flores, 123 - Centro, São Vicente - SP",
+    endereco: {
+        texto: "Rua das Flores, 123 - Centro, São Vicente - SP",
+        mapa: "https://www.google.com/maps/search/?api=1&query=Rua%20das%20Flores%2C%20123%20-%20Centro%2C%20S%C3%A3o%20Vicente%20-%20SP"
+    },
 
     hero: {
         tag: "Soluções profissionais",
@@ -18,8 +22,10 @@ const empresa = {
         descricao: "Soluções profissionais para sua casa ou empresa, com atendimento personalizado e compromisso com cada projeto.",
 
         botaoPrincipal: "Solicitar orçamento",
+        linkBotaoPrincipal: "#contato",
 
-        botaoSecundario: "Conheça nossos serviços"
+        botaoSecundario: "Conheça nossos serviços",
+        linkBotaoSecundario: "#servicos"
     },
 
     links: {
@@ -28,6 +34,15 @@ const empresa = {
         servicos: "#servicos",
         diferenciais: "#diferenciais",
         contato: "#contato"
+    },
+
+    menu: { //navbar
+        inicio: "Início",
+        sobre: "Sobre",
+        servicos: "Serviços",
+        diferenciais: "Diferenciais",
+        contato: "Contato",
+        botao: "Solicitar orçamento"
     },
 
     cta: {
@@ -45,11 +60,11 @@ const empresa = {
         copyright: "Todos os direitos reservados.",
         desenvolvedor: "Desenvolvido por Andrade Web",
 
-         linksDesenvolvedor: {
-        whatsapp: "5513988677020",
-        instagram: "https://instagram.com/andradegab7",
-        portfolio: "https://github.com/AndradeGab"
-    }
+        linksDesenvolvedor: {
+            whatsapp: "5513988677020",
+            instagram: "https://instagram.com/andradegab7",
+            portfolio: "https://github.com/AndradeGab"
+        }
     },
 
     sobre: {
@@ -57,7 +72,11 @@ const empresa = {
 
         texto1: "A NOVA Serviços trabalha para oferecer soluções eficientes e um atendimento próximo de cada cliente.",
 
-        texto2: "Nosso objetivo é entender cada necessidade e entregar um serviço de qualidade, buscando sempre segurança, organização e satisfação."
+        texto2: "Nosso objetivo é entender cada necessidade e entregar um serviço de qualidade, buscando sempre segurança, organização e satisfação.",
+
+        botao: "Fale conosco →",
+
+        linkBotao: "#contato"
     },
 
     secoes: {
